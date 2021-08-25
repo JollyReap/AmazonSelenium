@@ -45,9 +45,10 @@ class Bot:
             amount_4 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
             amount_5 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
             amount_6 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
-
+            random_amounts = (amount_6, amount_5, amount_4, amount_3, amount_2,  amount_1)
         except:
             print('I couldn`t find buttons sorry:-(')
+        random.choice(random_amounts).click()
 
 def main():
     class_bot = Bot()
