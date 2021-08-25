@@ -37,10 +37,17 @@ class Bot:
         # It we choose random button that will click
         random.choice(random_design).click()
         sleep(2)
+        # These are all buttons with price
+        try:
+            amount_1 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
+            amount_2 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
+            amount_3 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
+            amount_4 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
+            amount_5 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
+            amount_6 = self.driver.find_element_by_xpath('//button[@id="gc-mini-picker-amount-1"]')
 
-
-
-
+        except:
+            print('I couldn`t find buttons sorry:-(')
 
 def main():
     class_bot = Bot()
