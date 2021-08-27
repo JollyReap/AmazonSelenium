@@ -21,7 +21,7 @@ class Bot:
 
     def navigate(self):
         self.driver.get('https://www.amazon.com/dp/B09BQSBQ6H/ref=s9_acsd_al_bw_c2_x_0_t?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-11&pf_rd_r=4TX9PPV5A48H9AX8CQFE&pf_rd_t=101&pf_rd_p=b1578539-8101-4760-b358-11f5ab6aaf32&pf_rd_i=2238192011')
-        email = ('an', 'vy', 'di', 'it', 'vs', '3', '2', '5')
+        
 
         #card = self.driver.find_element_by_xpath('//a[@class="a-color-base a-spacing-none a-link-normal acs-product-block__product-title"]')
         #card.click()
@@ -49,6 +49,8 @@ class Bot:
         except:
             print('I couldn`t find buttons sorry:-(')
         random.choice(random_amounts).click()
+        
+        self.driver.close()
 
 def main():
     class_bot = Bot()
